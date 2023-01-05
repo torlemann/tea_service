@@ -1,0 +1,2 @@
+class CreateTea < ApplicationRecord
+end
