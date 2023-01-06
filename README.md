@@ -132,7 +132,7 @@ Here are the endpoints for this project:
 
  - Customer Subscription creation. Associates a customer_id with an subscription_id
  ```bash
-  post "/api/v1/subscriptions"
+  post "/subscriptions"
  ```
 
  <!-- - Customer Subscription update. Can update the status of the customer subscription
@@ -140,12 +140,12 @@ Here are the endpoints for this project:
   patch "/api/v1/subscriptions"
  ``` -->
 
- - Customer Subscription Index. The associated customer lists all their subscriptions
+ - Customer Subscription Index. Lists active and inactive subscriptions associated with customer id
  ```bash
-  get "/subscriptions/:id"
+  get "/subscriptions/:customer_id"
  ```
 
-  - Customer Subscription Destroy. The associated customer detroys all their subscription
+  - Subscription Destroy. Destroy subscription by id
  ```bash
   delete "/subscriptions/:id"
  ```
@@ -181,6 +181,12 @@ Go to the project directory
 
 ```bash
   cd tea_service
+```
+
+Install gems
+
+```bash
+  bundle install
 ```
 
 Start the server
