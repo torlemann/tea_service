@@ -70,7 +70,7 @@ Maybe you can mention me or this repo in the acknowledgements too
   * [Deployment](#triangular_flag_on_post-deployment)
 - [Usage](#eyes-usage)
 - [Roadmap](#compass-roadmap)
-- [Stetch Goals](#smirk-stretch-goals)
+- [Stretch Goals](#smirk-stretch-goals)
 - [Contributing](#wave-contributing)
 - [FAQ](#grey_question-faq)
 - [Contact](#handshake-contact)
@@ -85,7 +85,7 @@ This API was created as a project for Turing School of Software and Design's cur
 ### :camera: Screenshots
 
 <div align="center"> 
-  <img src="./app/assets/images/schema.png" alt="The schema of the project includes 3 tables."  width="774" height="330" />
+  <img src="./app/assets/images/schema.png" alt="The schema of the project includes 3 tables."  width="774" height="370" />
 </div>
 
 
