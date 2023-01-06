@@ -2,7 +2,7 @@ class Api::V1::SubscriptionsController < ApplicationController
     def create
         subscription = Subscription.new(sub_params)
         if subscription.save
-          render json: subscription
+          render json: SubscriptionSerializer.new(subscription)
         else
           render json: { error: subscription.errors.full_messages.to_sentence }
         end

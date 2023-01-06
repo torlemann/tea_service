@@ -26,12 +26,12 @@ RSpec.describe "Subscription" do
         subscription = JSON.parse(response.body, symbolize_names: true)
 
         expect(subscription).to be_a Hash
-        binding.pry
         expect(subscription).to have_key(:data)
         expect(subscription[:data]).to have_key(:id)
         expect(subscription[:data]).to have_key(:type)
         expect(subscription[:data]).to have_key(:attributes)
-        expect(subscription[:data][:attributes]).to have_key(:customer_id)
+        expect(subscription[:data][:attributes]).to be_a Hash
+        expect(subscription[:data][:attributes].keys).to eq([:title, :price, :status, :frequency, :tea_id, :customer_id])
         end
     end
 end
