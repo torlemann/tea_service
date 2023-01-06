@@ -7,6 +7,14 @@ class Api::V1::SubscriptionsController < ApplicationController
           render json: { error: subscription.errors.full_messages.to_sentence }
         end
     end
+
+    def destroy
+      if Subscription.exists?(params[:id])
+        Subscription.destroy(params[:id])
+      else
+        render json: { error: 'No subscription found' }
+      end
+    end
   
     private
   

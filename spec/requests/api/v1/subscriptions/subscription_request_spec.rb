@@ -49,14 +49,11 @@ RSpec.describe "Subscription" do
             tea_id: tea_1.id,
             customer_id: customer_1.id
         )
+        headers = { 'CONTENT_TYPE' => 'application/json' }
 
-        delete "/api/v1/subscriptions/#{subscription_1.id}"
+        delete "/api/v1/subscriptions/#{subscription_1.id}", headers: headers, params: JSON.generate(subscription_1)
 
         expect(response).to be_successful
-
-        # subscription = JSON.parse(response.body, symbolize_names: true)
-
-        # expect(subscription).to be_a Hash
         end
     end
 end
